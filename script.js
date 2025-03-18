@@ -11,32 +11,17 @@ if (input && !isNaN(input) && input > 0 && input <= 99) {
       h = Math.floor((countdown % 86400) / 3600),
       m = Math.floor((countdown % 3600) / 60),
       s = countdown % 60;
-    if (d < 10) {
-      days.innerText = "0" + d;
-    } else {
-      days.innerText = d;
-    }
 
-    if (h < 10) {
-      hours.innerText = "0" + h;
-    } else {
-      hours.innerText = h;
-    }
-
-    if (m < 10) {
-      minutes.innerText = "0" + m;
-    } else {
-      minutes.innerText = m;
-    }
-
-    if (s < 10) {
-      seconds.innerText = "0" + s;
-    } else {
-      seconds.innerText = s;
-    }
+    days.innerText = String(d).padStart(2, "0");
+    hours.innerText = String(h).padStart(2, "0");
+    minutes.innerText = String(m).padStart(2, "0");
+    seconds.innerText = String(s).padStart(2, "0");
 
     if ((countdown -= 1) <= 0) clearInterval(timer);
   }
   update();
   let timer = setInterval(update, 1000);
+} else {
+  alert("invalid input");
+  location.reload();
 }
