@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-color: #211d2a;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+main {
+  height: 71.38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 104px;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.mountain {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  bottom: 0;
+}
+
+.title h1 {
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 7.5px;
+  text-transform: uppercase;
+}
+
+.timer {
+  width: 688px;
+  height: 184px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.days p,
+.hours p,
+.minutes p,
+.seconds p {
+  color: #8385a9;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 5.919px;
+}
+
+.block {
+  width: 148px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343650;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.block p {
+  color: #fb5e84;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 71px;
+  letter-spacing: -2.4px;
+}
+
+.behind-block {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 150px;
+  background-color: #191a23;
+  border-radius: 8px;
+}
+
+.shade {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: 10px;
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  opacity: 15.06%;
+}
+
+.circle-1,
+.circle-2 {
+  position: absolute;
+  z-index: 3;
+  width: 12px;
+  height: 12px;
+  background-color: #191a23;
+  border-radius: 50%;
+}
+
+.circle-1 {
+  left: -6px;
+}
+
+.circle-2 {
+  right: -6px;
+}
+
+.middle-line {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  opacity: 25.3%;
+  height: 1px;
+  width: 100%;
+}
+
+.socials {
+  position: absolute;
+  align-self: center;
+  bottom: 72px;
+  width: 136px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials a {
+  width: 24px;
+  height: 100%;
+}
+
+a img {
+  width: 24px;
+  height: 100%;
+}
+
+/* ########################################### animations ########################################### */
+
+a:hover img {
+  filter: brightness(0) saturate(100%) invert(62%) sepia(41%) saturate(5642%)
+    hue-rotate(312deg) brightness(101%) contrast(97%);
+}
+
+/* ########################################### responsive ########################################### */
+
+@media (max-width: 700px) {
+  .timer {
+    width: 327px;
+    height: 92px;
+  }
+
+  .block {
+    width: 70px;
+    height: 66.27px;
+  }
+
+  .days p,
+  .hours p,
+  .minutes p,
+  .seconds p {
+    font-size: 7px;
+    letter-spacing: 2.959px;
+  }
+
+  .block p {
+    font-size: 36px;
+  }
+
+  .behind-block {
+    height: 71px;
+  }
+
+  .circle-1,
+  .circle-2 {
+    width: 6px;
+    height: 6px;
+  }
+
+  .circle-1 {
+    left: -3px;
+  }
+
+  .circle-2 {
+    right: -3px;
+  }
+
+  .title h1 {
+    font-size: 18px;
+    letter-spacing: 6.136px;
+    width: 327px;
+    text-align: center;
+  }
+
+  .socials {
+    bottom: 48px;
+  }
+
+  .mountain {
+    height: 168px;
+    object-fit: cover;
+    object-position: right -127px top 0;
+  }
+
+  .stars {
+    min-height: 71.13%;
+    object-fit: cover;
+  }
+}
